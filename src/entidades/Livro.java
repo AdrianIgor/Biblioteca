@@ -4,6 +4,8 @@
  */
 package entidades;
 
+import javafx.scene.image.Image;
+
 /**
  *
  * @author unity
@@ -16,16 +18,21 @@ public class Livro {
     private String autor;
     private double preco;
     private String categoria;
+    private String sinopse;
     private int edicao;
+    private String imagem;
 
-    public Livro(String codigo, String nomeLivro, int paginas, String autor, double preco, String categoria, int edicao) {
+    public Livro(String codigo, String nomeLivro, int paginas, String autor
+            , double preco, String categoria, String sinopse, int edicao, String imagem) {
         this.codigo = codigo;
         this.nomeLivro = nomeLivro;
         this.paginas = paginas;
         this.autor = autor;
         this.preco = preco;
         this.categoria = categoria;
+        this.sinopse = sinopse;
         this.edicao = edicao;
+        this.imagem = imagem;
     }
 
     public String getCodigo() {
@@ -76,6 +83,14 @@ public class Livro {
         this.categoria = categoria;
     }
 
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
+    }
+    
     public int getEdicao() {
         return edicao;
     }
@@ -84,4 +99,11 @@ public class Livro {
         this.edicao = edicao;
     }
     
+     public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
 }

@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desafioprojeto2.FXMLDocument2Controller">
    <children>
-      <Button fx:id="cadastrar" layoutX="245.0" layoutY="324.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" text="FINALIZAR" />
+      <Button fx:id="cadastrar" layoutX="171.0" layoutY="327.0" mnemonicParsing="false" onAction="#cadastroCliente" prefHeight="37.0" prefWidth="110.0" text="FINALIZAR" />
       <TextField fx:id="inputNome" layoutX="96.0" layoutY="75.0" />
       <TextField fx:id="inputRG" layoutX="438.0" layoutY="75.0" />
       <TextField fx:id="inputCPF" layoutX="96.0" layoutY="135.0" />
@@ -29,5 +29,6 @@
       </Label>
       <PasswordField fx:id="inputSenha" layoutX="438.0" layoutY="200.0" />
       <PasswordField fx:id="inputSenha2" layoutX="438.0" layoutY="240.0" />
+      <Button fx:id="botaoCancel" layoutX="329.0" layoutY="327.0" mnemonicParsing="false" onAction="#cancelarJanela" prefHeight="37.0" prefWidth="109.0" text="CANCELAR" />
    </children>
 </AnchorPane>

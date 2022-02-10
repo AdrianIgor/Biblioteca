@@ -4,13 +4,17 @@
  */
 package desafioprojeto2;
 
+import desafioprojeto3.DesafioProjeto3;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -22,6 +26,9 @@ public class FXMLDocument2Controller implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    @FXML
+    private Button botaoCancel;
     
     @FXML
     private Button cadastrar;
@@ -50,6 +57,16 @@ public class FXMLDocument2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+
+    @FXML
+    void cadastroCliente(ActionEvent event) throws IOException{
+        Stage stage = new Stage();
+        new DesafioProjeto3().start(stage);
     }    
     
+     @FXML
+    void cancelarJanela(ActionEvent event) {
+        this.botaoCancel.getScene().getWindow().hide();
+    }
 }

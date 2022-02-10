@@ -16,21 +16,39 @@ import javafx.stage.Stage;
  */
 public class DesafioProjeto extends Application {
     
+    private static Scene scene;
+    private static Scene scene2;
+    private static Scene scene3;
+    private static Scene scene4;
+    private static Scene scene5;
+    
+    private static Stage stage;
+    
     @Override
     public void start(Stage stage) throws Exception {
+        
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
-        Scene scene = new Scene(root);
+        scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
     }
 
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
     }
+
+    public static Stage getStage() {
+        return stage;
+    }
+
+    
+    
+    
     
 }

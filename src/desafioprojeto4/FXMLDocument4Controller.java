@@ -4,12 +4,15 @@
  */
 package desafioprojeto4;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -22,11 +25,16 @@ public class FXMLDocument4Controller implements Initializable {
      * Initializes the controller class.
      */
     
-     @FXML
+    @FXML
     private Button addValor;
 
     @FXML
     private TextField valor;
+    
+    @FXML
+    void add(ActionEvent event) throws IOException{
+        this.addValor.getScene().getWindow().hide();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

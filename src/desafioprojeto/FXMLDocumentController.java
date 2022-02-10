@@ -11,9 +11,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import desafioprojeto2.DesafioProjeto2;
+import desafioprojeto3.DesafioProjeto3;
+import java.io.IOException;
+import javafx.stage.Stage;
 
 /**
  *
@@ -34,8 +37,15 @@ public class FXMLDocumentController implements Initializable {
     private PasswordField senhaField;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
+    private void handleButtonAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        new DesafioProjeto2().start(stage);
+    }
+    
+    @FXML
+    void logon(ActionEvent event) throws IOException{
+        Stage stage = new Stage();
+        new DesafioProjeto3().start(stage);
     }
     
     @Override
